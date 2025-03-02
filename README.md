@@ -4,7 +4,7 @@
 ## Repository Structure
 
 ```
-📦 Assignment Repo  
+📦 VR_Assignment1_ARYAMAN_IMT2022513
 │-- 📜 README.md  
 │  
 ├── 📂 Q1  
