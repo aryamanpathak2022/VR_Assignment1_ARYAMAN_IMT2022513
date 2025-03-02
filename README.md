@@ -265,7 +265,7 @@ Run the cells in sequential order.
 
 ###  1. User Input
 - The script first asks user for input and output directories path
-- The input directory must contain images named in sequential numerical order, such as 1.png, 2.png, …, N.png. The output directory will store the generated panorama image, which will be saved as panorama.jpg.
+- The input directory must contain images named in sequential numerical order, such as 1.png, 2.png, …, N.png from left to right. The output directory will store the generated panorama image, which will be saved as panorama.jpg.
 
 ###  2. Read & Sort Images
 - The script reads images from the input directory.
@@ -314,6 +314,8 @@ input_dir/
  ├── 2.jpg
  ├── 3.jpg
 ```
+- left to right 
+
 ### 1. Sample Input Images
 
 ![Sample Input Image](Q2/data/example_2/1.png)
