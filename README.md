@@ -55,7 +55,7 @@ pip install opencv-python numpy argparse
 
 ### 1. Original Image (Sample Input)
 
-![Sample Input Image](images/sample_input.jpg)
+![Sample Input Image](Q1/data/2.png)
 
 This is the original image that will be processed.
 
