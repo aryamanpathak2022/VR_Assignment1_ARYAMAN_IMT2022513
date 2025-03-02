@@ -76,7 +76,25 @@ Edges of objects in the image are detected using Canny edge detection.
 
 The image is segmented based on intensity values.
 
-### 3. Number of coins (Expected Console Output)
+### 2. Individual Coins Cropped   (Expected Output)
+
+![coin Image](Q1/data/2_output/coin_0.jpg)
+![coin Image](Q1/data/2_output/coin_1.jpg)
+
+![coin Image](Q1/data/2_output/coin_2.jpg)
+
+![coin Image](Q1/data/2_output/coin_3.jpg)
+
+![coin Image](Q1/data/2_output/coin_4.jpg)
+
+![coin Image](Q1/data/2_output/coin_5.jpg)
+
+![coin Image](Q1/data/2_output/coin_6.jpg)
+
+
+The individual images for each coins detected
+
+### 4. Number of coins (Expected Console Output)
 
 ```
 7 coins detected
