@@ -50,6 +50,7 @@ This repository contains solutions for two questions (Q1 and Q2) of the assignme
 	-	Q2.ipynb and q2.py: Contains the implementation of the solution for Q2.
 
 Each .ipynb file contains a Jupyter Notebook version of the solution, while the .py script provides the corresponding Python implementation.
+Note - The assignment was done in google colab so it's prefered to use that to run the files
 
 # PART-A
 # Coin Detection, Segmentation, and Counting
@@ -67,7 +68,7 @@ pip install opencv-python numpy
 ## Steps to Run
 
 - There are both jupter notebook (prefered) and normal python file for the same code available
-- Clone the repo and follow the given steps
+- Clone the repo, navigate to the root folder of the repo and follow the given steps
 - Follow the given input and output directory structures 
 
 Running the Python Script (Q1.py)
@@ -100,7 +101,7 @@ pip install jupyter
 cd Q1
 ```
 
-3.	Launch Jupyter Notebook or Open in Google Colab/ Vs code :
+3.	Launch Jupyter Notebook or Open in Google Colab/ VS Code (with Jupyter extension) :
 
 ```
 jupyter notebook
@@ -136,16 +137,14 @@ Run the cells in sequential order
 - Counts the total number of detected coins.
 - Displays the count as an console output.
 
-## Running the Notebook
-1. Open the Jupyter Notebook (`.ipynb` file) in Google Colab or JupyterLab.
-2. Upload an image containing scattered Indian coins.
-3. Run the cells sequentially to process the image and obtain results.
 
-## Expected Outputs
+## Expected Outputs 
 - `edges_detected.jpg`: Image with detected coin contours outlined.
 - `segments.jpg`: Image with segmented coins on a black background.
 - `coin_X.jpg`: Individual extracted coins.
 - Console Output: Total number of detected coins.
+
+These will be present in the output directory specified by the user
 
 
 ## Sample Input 
@@ -252,7 +251,7 @@ pip install jupyter
 cd Q2
 ```
 
-3.	Launch Jupyter Notebook or Open in Google Colab/ Vs code :
+3.	Launch Jupyter Notebook or Open in Google Colab/ VS Code (with Jupyter extension) :
 
 
 ```
