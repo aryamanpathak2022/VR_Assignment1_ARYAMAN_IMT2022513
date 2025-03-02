@@ -12,9 +12,10 @@
 │   │   ├── 1.png  
 │   │   ├── 2.png  
 │   │   ├── 3.png  
-│   │   ├── 4.png  
+│   │   ├── 4.png
+|   |   ├── 📂 1_output   
 │   |   ├── 📂 2_output  
-│   │       
+│   │   ├── ............    
 │   ├── Q1.ipynb  
 │   ├── Q1.py  
 │  
@@ -30,9 +31,9 @@
 │   │   │   ├── 2.png  
 │   │   │   ├── ...  
 │   │   ├── 📂 example_1_output  
-│   │        ├── panorama.png  
-│   │     
-│   │  
+│   │        ├── panorama.png
+│   │  	├── 📂 example_2_output  	
+│   │        ├── panorama.png
 │   ├── Q2.ipynb  
 │   ├── Q2.py  
 ```
@@ -40,12 +41,12 @@
 This repository contains solutions for two questions (Q1 and Q2) of the assignment.
 -	Q1 Folder
 	-	data/: Contains four images of coins (1.png, 2.png, etc.).
-	-	2_output/: Stores the processed outputs for 2.png.
+	-	2_output/: Stores the processed outputs for 2.png. Similar folder naming for other input images 
 	-	Q1.ipynb and q1.py: Contains the implementation of the solution for Q1.
  
 -	Q2 Folder
  	-	data/: Includes two example folders (example_1 and example_2) containing images for processing.
-	-	example_1_output/: Stores the processed output images for the first example set.
+	-	example_1_output/: Stores the processed output images for the first example set. Similar folder naming for other input images 
 	-	Q2.ipynb and q2.py: Contains the implementation of the solution for Q2.
 
 Each .ipynb file contains a Jupyter Notebook version of the solution, while the .py script provides the corresponding Python implementation.
@@ -315,9 +316,13 @@ input_dir/
 ```
 ### 1. Sample Input Images
 
-![Sample Input Image](Q2/data/example_1/1.png)
-![Sample Input Image](Q2/data/example_1/2.png)
-![Sample Input Image](Q2/data/example_1/3.png)
+![Sample Input Image](Q2/data/example_2/1.png)
+![Sample Input Image](Q2/data/example_2/2.png)
+![Sample Input Image](Q2/data/example_2/3.png)
+![Sample Input Image](Q2/data/example_2/4.png)
+![Sample Input Image](Q2/data/example_2/5.png)
+
+
 
 ---
 
@@ -331,5 +336,5 @@ output_dir/
 ```
 
 ### 1. Sample Output Image
-![Sample Output Image](Q2/data/example_1_output/panorama.jpg)
+![Sample Output Image](Q2/data/example_2_output/panorama.jpg)
 
