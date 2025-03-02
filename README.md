@@ -98,74 +98,43 @@ This project performs image stitching using SIFT feature detection and homograph
 To run the notebook, install the required dependencies using:
 ```bash
 
-pip install numpy opencv-python imutils tqdm
+pip install numpy opencv-python imutils tqdm argparse
 ```
 
 ## Steps
 
-### 🔹 1. Read & Sort Images
+###  1. Read & Sort Images
+- The script first asks user for input and output directories path
+- The input directory must contain images named in sequential numerical order, such as 1.png, 2.png, …, N.png. The output directory will store the generated panorama image, which will be saved as panorama.jpg.
+
+###  2. Read & Sort Images
 - The script reads images from the input directory.
 - It filters out non-numeric filenames and sorts them in numerical order.
 
-```python
-img_path = [os.path.join(input_dir, i) for i in os.listdir(input_dir) if os.path.splitext(i)[0].isdigit()]
-img_path.sort(key=lambda x: int(os.path.splitext(os.path.basename(x))[0]))
-```
-
-### 🔹 2. Load the First Image
+###  3. Load the First Image
 - Reads and resizes the first image to 600px width for consistency.
 
-```python
-left_img = cv2.imread(img_path[0])
-left_img = imutils.resize(left_img, width=600)
-cv2_imshow(left_img)
-```
 
-### 🔹 3. Detect Keypoints & Descriptors using SIFT
-- Uses the SIFT algorithm to extract feature points from each image.
+###  4. Detect Keypoints & Descriptors using SIFT
+- Uses the SIFT algorithm to extract feature points from each image by looping over the input images.
 
-```python
-descriptor = cv2.SIFT_create()
-kpsA, desA = descriptor.detectAndCompute(left_img, None)
-kpsB, desB = descriptor.detectAndCompute(right_img, None)
-```
 
-### 🔹 4. Match Keypoints using KNN & Apply Ratio Test
-- Uses K-Nearest Neighbors (KNN) to match features between consecutive images.
+### 5. Match Keypoints using KNN & Apply Ratio Test
+- Using K-Nearest Neighbors (KNN) to match features between consecutive images.
 - Applies Lowe’s ratio test (0.75 threshold) to filter good matches.
 
-```python
-matcher = cv2.BFMatcher()
-rawMatches = matcher.knnMatch(desA, desB, k=2)
 
-matches = []
-for m in rawMatches:
-    if len(m) == 2 and m[0].distance < m[1].distance * 0.75:
-        matches.append((m[0].trainIdx, m[0].queryIdx))
-```
-
-### 🔹 5. Compute Homography & Warp Image
+### 6. Compute Homography & Warp Image
 - Homography matrix aligns one image onto the next.
-- Uses cv2.RANSAC with a threshold of 5.0 for robust transformation.
+- Uses cv2.RANSAC with a threshold of 5.0 for  transformation.
 
-```python
-H, status = cv2.findHomography(ptsA, ptsB, cv2.RANSAC, 5.0)
-pano_img = cv2.warpPerspective(left_img, H, (new_width, new_height))
-```
 
-### 🔹 6. Blend & Stitch Images
+### 7. Blend & Stitch Images
 - The right image is blended onto the warped perspective of the left image.
 - Crops excess black areas using contours & bounding box extraction.
 
-```python
-gray = cv2.cvtColor(pano_img, cv2.COLOR_BGR2GRAY)
-_, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY)
-contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-if contours:
-    x, y, w, h = cv2.boundingRect(contours[0])
-    pano_img = pano_img[y:y+h-1, x:x+w-1]
-```
+### 8. Repeat
+- The combined images becomes the left image now and the next image will be merged repating the above steps
 
 ---
 
@@ -187,6 +156,12 @@ input_dir/
  ├── 2.jpg
  ├── 3.jpg
 ```
+### 1. Sample Input Images
+![Sample Input Image](images/sample_input.jpg)
+![Sample Input Image](images/sample_input.jpg)
+
+![Sample Input Image](images/sample_input.jpg)
+
 
 ---
 
@@ -196,6 +171,9 @@ Final stitched panorama saved in:
 
 ```
 output_dir/
- ├── pano3.jpg
+ ├── panorama.jpg
 ```
+
+### 1. Sample Output Image
+![Sample Input Image](images/sample_input.jpg)
 
