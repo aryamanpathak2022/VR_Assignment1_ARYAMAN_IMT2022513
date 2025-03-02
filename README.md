@@ -235,7 +235,7 @@ Ensure that all input images are placed in the correct directory before running 
 
 ---
 # PART-B
-# Image Stitching using OpenCV
+# Image Stitching using SIFT
 
 ## Overview
 This part performs image stitching using SIFT feature detection and homography transformation to align and merge images into a panoramic view. It reads a sequence of images, detects keypoints, matches them, computes a homography matrix, and stitches images together.
