@@ -67,7 +67,7 @@ pip install opencv-python numpy
 
 ## Steps to Run
 
-- There are both jupter notebook (prefered) and normal python file for the same code available
+- There are both jupyter notebook (prefered) and normal python file for the same code available
 - Clone the repo, navigate to the root folder of the repo and follow the given steps
 - Follow the given input and output directory structures 
 
@@ -251,8 +251,8 @@ pip install numpy opencv-python imutils tqdm argparse
 
 ## Steps to Run
 
-- There are both jupter notebook (prefered) and normal python file for the same code available
-- Clone the repo and follow the given steps
+- There are both jupyter notebook (prefered) and normal python file for the same code available
+- - Clone the repo, navigate to the root folder of the repo and follow the given steps
 - Follow the given input and output directory structures 
 
 Running the Python Script (Q2.py)
