@@ -16,7 +16,7 @@
 │   |   ├── 📂 2_output  
 │   │       
 │   ├── Q1.ipynb  
-│   ├── q1.py  
+│   ├── Q1.py  
 │  
 ├── 📂 Q2  
 │   ├── 📂 data  
@@ -34,7 +34,7 @@
 │   │     
 │   │  
 │   ├── Q2.ipynb  
-│   ├── q2.py  
+│   ├── Q2.py  
 ```
 
 This repository contains solutions for two questions (Q1 and Q2) of the assignment.
@@ -251,7 +251,8 @@ pip install jupyter
 cd Q2
 ```
 
-3.	Launch Jupyter Notebook:
+3.	Launch Jupyter Notebook or Open in Google Colab/ Vs code :
+
 
 ```
 jupyter notebook
