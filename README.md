@@ -64,31 +64,27 @@ This is the original image that will be processed.
 
 ## Sample Output
 
-### 1. Grayscale Conversion (Expected Output)
+### 1. Edge Detection (Expected Output)
 
-![Grayscale Image](images/grayscale_output.jpg)
-
-The original image is converted into grayscale.
-
-### 2. Edge Detection (Expected Output)
-
-![Edge Detection](images/edge_output.jpg)
+![Edge Detection](Q1/data/2_output/edges_detected.jpg)
 
 Edges of objects in the image are detected using Canny edge detection.
 
-### 3. Image Segmentation (Expected Output)
+### 2. Image Segmentation (Expected Output)
 
-![Segmented Image](images/segmentation_output.jpg)
+![Segmented Image](Q1/data/2_output/segments.jpg)
 
 The image is segmented based on intensity values.
 
-### 4. Number of coins (Expected Console Output)
+### 3. Number of coins (Expected Console Output)
 
 ```
-6 coins detected
+7 coins detected
 ```
 
+![Segmented Image](Q1/data/2_output/console.png)
 Ensure that all input images are placed in the correct directory before running the notebook.
+
 
 
 # Image Stitching using OpenCV
