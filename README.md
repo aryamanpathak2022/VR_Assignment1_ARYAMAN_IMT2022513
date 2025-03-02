@@ -121,7 +121,7 @@ Run the cells in sequential order
 ### 3. Coin Detection
 - Find contours in the thresholded image.
 - Filter out circular objects based on perimeter and area.
-- Visualize detected coins by outlining them in blue.
+- Visualize detected coins by outlining them in red.
 
 ### 4. Coin Segmentation
 - Create a binary mask based on detected contours.
