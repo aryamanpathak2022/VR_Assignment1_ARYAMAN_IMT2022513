@@ -202,11 +202,7 @@ The individual images for each coins detected
 Ensure that all input images are placed in the correct directory before running the notebook.
 
 
-
-## Observations
-
-
-
+---
 
 ## Observations
 
@@ -237,7 +233,7 @@ Ensure that all input images are placed in the correct directory before running 
 - Using minimum enclosing circles ensures that coins are correctly cropped.
 - Variations in lighting and contrast can sometimes affect segmentation quality
 
-
+---
 # PART-B
 # Image Stitching using OpenCV
 
@@ -376,7 +372,7 @@ output_dir/
 
 ### 1. Sample Output Image
 ![Sample Output Image](Q2/data/example_2_output/panorama.jpg)
-
+---
 ## Observations
 
 ### What Was Tried
