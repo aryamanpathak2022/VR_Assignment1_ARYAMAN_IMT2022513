@@ -201,7 +201,7 @@ The individual images for each coins detected
 
 Ensure that all input images are placed in the correct directory before running the notebook.
 
-
+### Note  - Other inputs and outputs are present in the repo
 ---
 
 ## Observations
@@ -373,6 +373,9 @@ output_dir/
 ### 1. Sample Output Image
 ![Sample Output Image](Q2/data/example_2_output/panorama.jpg)
 ---
+
+### Note  - Other inputs and outputs are present in the repo
+
 ## Observations
 
 ### What Was Tried
