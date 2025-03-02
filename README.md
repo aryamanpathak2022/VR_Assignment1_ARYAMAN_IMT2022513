@@ -60,7 +60,7 @@ This part uses computer vision techniques to detect, segment, and count coins fr
 To run the notebook, ensure you have Python installed (preferably Python 3.7 or later).
 and install the required dependencies using:
 ```bash
-pip install opencv-python numpy argparse
+pip install opencv-python numpy 
 ```
 
 ## Steps to Run
@@ -99,7 +99,7 @@ pip install jupyter
 cd Q1
 ```
 
-3.	Launch Jupyter Notebook:
+3.	Launch Jupyter Notebook or Open in Google Colab/ Vs code :
 
 ```
 jupyter notebook
