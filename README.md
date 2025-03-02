@@ -1,7 +1,7 @@
 # Assignment-1 
 
-NAME - ARYAMAN PATHAK
-ROLL NUMBER - IMT2022513
+- NAME - ARYAMAN PATHAK
+- ROLL NUMBER - IMT2022513
 
 
 ## Repository Structure
