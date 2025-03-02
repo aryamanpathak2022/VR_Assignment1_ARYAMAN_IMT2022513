@@ -1,16 +1,110 @@
+# Assignment-1 
+
+
+## Repository Structure
+
+📦 Assignment Repo  
+│-- 📜 README.md  
+│  
+├── 📂 Q1  
+│   ├── 📂 data  
+│   │   ├── 1.png  
+│   │   ├── 2.png  
+│   │   ├── 3.png  
+│   │   ├── 4.png  
+│   |   ├── 📂 2_output  
+│   │       
+│   ├── Q1.ipynb  
+│   ├── q1.py  
+│  
+├── 📂 Q2  
+│   ├── 📂 data  
+│   │   ├── 📂 example_1  
+│   │   │   ├── 1.png  
+│   │   │   ├── 2.png  
+│   │   │   ├── ...  
+│   │   │  
+│   │   ├── 📂 example_2  
+│   │   │   ├── 1.png  
+│   │   │   ├── 2.png  
+│   │   │   ├── ...  
+│   │   ├── 📂 example_1_output  
+│   │        ├── panorama.png  
+│   │     
+│   │  
+│   ├── Q2.ipynb  
+│   ├── q2.py  
+
+
+This repository contains solutions for two questions (Q1 and Q2) of the assignment.
+	•	Q1 Folder
+	•	data/: Contains four images of coins (1.png, 2.png, etc.).
+	•	2_output/: Stores the processed outputs for 2.png.
+	•	Q1.ipynb and q1.py: Contains the implementation of the solution for Q1.
+	•	Q2 Folder
+	•	data/: Includes two example folders (example_1 and example_2) containing images for processing.
+	•	example_1_output/: Stores the processed output images for the first example set.
+	•	Q2.ipynb and q2.py: Contains the implementation of the solution for Q2.
+
+Each .ipynb file contains a Jupyter Notebook version of the solution, while the .py script provides the corresponding Python implementation.
+
+# PART-A
 # Coin Detection, Segmentation, and Counting
 
 ## Overview
-This project uses computer vision techniques to detect, segment, and count coins from an image containing scattered Indian coins. The implementation is done in a Jupyter Notebook (`.ipynb`).
+This part uses computer vision techniques to detect, segment, and count coins from an image containing scattered Indian coins. The implementation is done in a Jupyter Notebook (`.ipynb`).
 
 ## Requirements
-To run the notebook, install the required dependencies using:
+To run the notebook, ensure you have Python installed (preferably Python 3.7 or later).
+and install the required dependencies using:
 ```bash
 pip install opencv-python numpy argparse
 ```
 
-## Steps
+## Steps to Run
 
+- There are both jupter notebook (prefered) and normal python file for the same code available
+- Clone the repo and follow the given steps
+- Follow the given input and output directory structures 
+
+Running the Python Script (Q1.py)
+1.	Open a terminal or command prompt.
+2.	Navigate to the Q1 folder:
+```
+cd Q1
+```
+
+3.	Install the required dependencies:
+```
+pip install opencv-python numpy argparse
+```
+
+4.	Run the script:
+```
+python Q1.py
+```
+
+
+Running the Jupyter Notebook (Q1.ipynb)
+1.	Install Jupyter Notebook if not already installed:
+```
+pip install jupyter
+```
+
+2.	Navigate to the Q1 folder:
+
+```
+cd Q1
+```
+
+3.	Launch Jupyter Notebook:
+
+```
+jupyter notebook
+```
+Run the cells in sequential order 
+
+## Steps
 
 ###  1. User Input
 - The script first asks user for input image path  and output directory to save the processed images:
@@ -104,11 +198,11 @@ The individual images for each coins detected
 Ensure that all input images are placed in the correct directory before running the notebook.
 
 
-
+# PART-B
 # Image Stitching using OpenCV
 
 ## Overview
-This project performs image stitching using SIFT feature detection and homography transformation to align and merge images into a panoramic view. It reads a sequence of images, detects keypoints, matches them, computes a homography matrix, and stitches images together.
+This part performs image stitching using SIFT feature detection and homography transformation to align and merge images into a panoramic view. It reads a sequence of images, detects keypoints, matches them, computes a homography matrix, and stitches images together.
 
 
 ## Requirements
@@ -118,6 +212,50 @@ To run the notebook, install the required dependencies using:
 
 pip install numpy opencv-python imutils tqdm argparse
 ```
+
+## Steps to Run
+
+- There are both jupter notebook (prefered) and normal python file for the same code available
+- Clone the repo and follow the given steps
+- Follow the given input and output directory structures 
+
+Running the Python Script (Q2.py)
+1.	Open a terminal or command prompt.
+2.	Navigate to the Q1 folder:
+```
+cd Q2
+```
+
+3.	Install the required dependencies:
+```
+pip install opencv-python numpy argparse
+```
+
+4.	Run the script:
+```
+python Q2.py
+```
+
+
+Running the Jupyter Notebook (Q2.ipynb)
+1.	Install Jupyter Notebook if not already installed:
+```
+pip install jupyter
+```
+
+2.	Navigate to the Q2 folder:
+
+```
+cd Q2
+```
+
+3.	Launch Jupyter Notebook:
+
+```
+jupyter notebook
+```
+Run the cells in sequential order.
+
 
 ## Steps
 
@@ -156,15 +294,13 @@ pip install numpy opencv-python imutils tqdm argparse
 
 ---
 
-## 📌 Expected Output
+##  Expected Output
 
-| Sample Input | Expected Output |
-|-------------|----------------|
-| Left Image  | Stitched Image  |
+- panorama.jpg ( Final Panorama Image)
 
 ---
 
-## 📥 Sample Input
+## Sample Input
 
 Sample directory structure:
 
@@ -182,7 +318,7 @@ input_dir/
 
 ---
 
-## 📤 Sample Output
+##  Sample Output
 
 Final stitched panorama saved in:
 
