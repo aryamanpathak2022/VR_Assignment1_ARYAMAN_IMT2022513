@@ -80,7 +80,7 @@ for i in tqdm(range(1, len(img_path))):
         min_height = min(pano_img.shape[0], right_img.shape[0])
         min_width = min(pano_img.shape[1], right_img.shape[1])
 
-        # Crop  image to the same size
+        # Crop and merge the images
         pano_img[0:right_img.shape[0], 0:right_img.shape[1]] = right_img
 
         cv2_imshow(pano_img)

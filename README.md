@@ -198,7 +198,45 @@ The individual images for each coins detected
 ```
 
 ![Segmented Image](Q1/data/2_output/console.png)
+
+
 Ensure that all input images are placed in the correct directory before running the notebook.
+
+
+
+## Observations
+
+
+
+
+## Observations
+
+### What Was Tried
+- Various Gaussian blur kernel sizes (e.g., 3x3, 5x5, 7x7) were tested for optimal edge detection.
+- Different contour filtering techniques based on area and perimeter.
+- Various thresholding methods, including Otsu’s and adaptive thresholding.
+
+### What Didn't Work
+- Fixed thresholding methods led to inconsistent detections in varying lighting conditions.
+- Smaller Gaussian blur kernels resulted in excessive noise in edge detection.
+
+### Final Approach
+- Applied a 7x7 Gaussian blur for noise reduction.
+- Used adaptive thresholding for robust edge detection.
+- Filtered contours based on shape and circularity instead of area alone.
+- Extracted individual coins using minimum enclosing circles.
+
+### Effectiveness of Preprocessing
+- Converting the image to grayscale reduces computational complexity.
+- Gaussian blur (7x7) effectively smooths the image and reduces noise.
+- Adaptive thresholding enhances the contrast between the coins and the background, improving edge detection.
+
+### Accuracy of Coin Detection
+- In some cases, overlapping coins may result in incorrect detections or missing coins.
+- Some small noise objects may still appear if they meet the circular shape criteria.
+### Individual Coin Extraction
+- Using minimum enclosing circles ensures that coins are correctly cropped.
+- Variations in lighting and contrast can sometimes affect segmentation quality
 
 
 # PART-B
@@ -339,4 +377,21 @@ output_dir/
 
 ### 1. Sample Output Image
 ![Sample Output Image](Q2/data/example_2_output/panorama.jpg)
+
+## Observations
+
+### What Was Tried
+- SIFT was used to extract keypoints and descriptors.
+- KNN (K-Nearest Neighbors) was used for feature matching.
+- Different Lowe’s ratio  was applied to filter out poor matches..
+
+### What Didn't Work
+- If images had different resolutions, stitching became inaccurate.
+- Some areas in the final panorama had ghosting or misaligned regions due to inaccurate homography estimation.
+
+### Final Approach
+- Images were resized to a uniform width to improve consistency and sorting ensured correct sequential order.
+- SIFT was used to extract better feature points and Lowe’s ratio test with a threshold of 0.75 helped filter bad matches.
+- Applied RANSAC for homography estimation and image alignment..
+- Iteratively stitched images in sequence to improve accuracy.
 
