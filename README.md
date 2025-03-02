@@ -3,6 +3,7 @@
 
 ## Repository Structure
 
+```
 📦 Assignment Repo  
 │-- 📜 README.md  
 │  
@@ -34,17 +35,18 @@
 │   │  
 │   ├── Q2.ipynb  
 │   ├── q2.py  
-
+```
 
 This repository contains solutions for two questions (Q1 and Q2) of the assignment.
-	•	Q1 Folder
-	•	data/: Contains four images of coins (1.png, 2.png, etc.).
-	•	2_output/: Stores the processed outputs for 2.png.
-	•	Q1.ipynb and q1.py: Contains the implementation of the solution for Q1.
-	•	Q2 Folder
-	•	data/: Includes two example folders (example_1 and example_2) containing images for processing.
-	•	example_1_output/: Stores the processed output images for the first example set.
-	•	Q2.ipynb and q2.py: Contains the implementation of the solution for Q2.
+-	Q1 Folder
+	-	data/: Contains four images of coins (1.png, 2.png, etc.).
+	-	2_output/: Stores the processed outputs for 2.png.
+	-	Q1.ipynb and q1.py: Contains the implementation of the solution for Q1.
+ 
+-	Q2 Folder
+ 	-	data/: Includes two example folders (example_1 and example_2) containing images for processing.
+	-	example_1_output/: Stores the processed output images for the first example set.
+	-	Q2.ipynb and q2.py: Contains the implementation of the solution for Q2.
 
 Each .ipynb file contains a Jupyter Notebook version of the solution, while the .py script provides the corresponding Python implementation.
 
