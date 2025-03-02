@@ -6,34 +6,38 @@ This project uses computer vision techniques to detect, segment, and count coins
 ## Requirements
 To run the notebook, install the required dependencies using:
 ```bash
-pip install opencv-python numpy
+pip install opencv-python numpy argparse
 ```
 
 ## Steps
 
-### 1. Preprocessing the Image
-- Convert the image to grayscale.
-- Resize while maintaining aspect ratio.
-- Apply Gaussian blur.
-- Use adaptive thresholding for better edge detection.
 
-### 2. Coin Detection
+###  1. User Input
+- The script first asks user for input image path  and output directory to save the processed images:
+
+### 2. Preprocessing the Image
+- Convert the image to grayscale.
+- Resize while maintaining aspect ratio (max_dim == 1000).
+- Apply Gaussian blur (7x7).
+- Uses adaptive thresholding for better edge detection.
+
+### 3. Coin Detection
 - Find contours in the thresholded image.
 - Filter out circular objects based on perimeter and area.
-- Visualize detected coins by outlining them in green.
+- Visualize detected coins by outlining them in blue.
 
-### 3. Coin Segmentation
+### 4. Coin Segmentation
 - Create a binary mask based on detected contours.
 - Extract segmented coin images on a black background.
 - Save the segmented image.
 
-### 4. Individual Coin Extraction
+### 5. Individual Coin Extraction
 - Extract each detected coin using minimum enclosing circles.
-- Save each coin separately.
+- Crop and save each coin separately.
 
-### 5. Coin Counting
-- Count the total number of detected coins.
-- Display the count as an output.
+### 6. Coin Counting
+- Counts the total number of detected coins.
+- Displays the count as an console output.
 
 ## Running the Notebook
 1. Open the Jupyter Notebook (`.ipynb` file) in Google Colab or JupyterLab.
@@ -103,7 +107,7 @@ pip install numpy opencv-python imutils tqdm argparse
 
 ## Steps
 
-###  1. Read & Sort Images
+###  1. User Input
 - The script first asks user for input and output directories path
 - The input directory must contain images named in sequential numerical order, such as 1.png, 2.png, …, N.png. The output directory will store the generated panorama image, which will be saved as panorama.jpg.
 
@@ -157,11 +161,10 @@ input_dir/
  ├── 3.jpg
 ```
 ### 1. Sample Input Images
-![Sample Input Image](images/sample_input.jpg)
-![Sample Input Image](images/sample_input.jpg)
 
-![Sample Input Image](images/sample_input.jpg)
-
+![Sample Input Image](Q2/data/example_1/1.png)
+![Sample Input Image](Q2/data/example_1/2.png)
+![Sample Input Image](Q2/data/example_1/3.png)
 
 ---
 
@@ -175,5 +178,5 @@ output_dir/
 ```
 
 ### 1. Sample Output Image
-![Sample Input Image](images/sample_input.jpg)
+![Sample Output Image](Q2/data/example_1_output/panorama.jpg)
 
