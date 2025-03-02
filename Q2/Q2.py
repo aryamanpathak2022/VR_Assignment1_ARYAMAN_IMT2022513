@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
 
-import os
 import numpy as np
 import imutils
 import cv2
+import os
 from tqdm import tqdm
+import argparse
 
 # input from user
 input_dir = input("Enter the input directory: ")
@@ -33,6 +33,11 @@ for i in tqdm(range(1, len(img_path))):
     right_img = cv2.imread(img_path[i])
     right_img = imutils.resize(right_img, width=600)
 
+
+    # Swap left and right images to maintain correct stitching order
+    temp_img=right_img
+    right_img=left_img
+    left_img=temp_img
     # Detect keypoints and descriptors using SIFT
     descriptor = cv2.SIFT_create()
     kpsA, desA = descriptor.detectAndCompute(left_img, None)
@@ -66,7 +71,7 @@ for i in tqdm(range(1, len(img_path))):
 
         print("Homography Matrix:\n", H)
         # Warp left image to new perspective
-        new_width = left_img.shape[1] + right_img.shape[1]  # Add extra padding
+        new_width = left_img.shape[1] + right_img.shape[1]
         new_height = max(left_img.shape[0], right_img.shape[0])
         pano_img = cv2.warpPerspective(left_img, H, (new_width, new_height))
 
@@ -75,10 +80,10 @@ for i in tqdm(range(1, len(img_path))):
         min_height = min(pano_img.shape[0], right_img.shape[0])
         min_width = min(pano_img.shape[1], right_img.shape[1])
 
-        # Crop both images to the same size
+        # Crop  image to the same size
         pano_img[0:right_img.shape[0], 0:right_img.shape[1]] = right_img
 
-
+        cv2_imshow(pano_img)
         # Convert to grayscale and crop black regions
         gray = cv2.cvtColor(pano_img, cv2.COLOR_BGR2GRAY)
         _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY)
